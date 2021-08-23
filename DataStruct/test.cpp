@@ -7,6 +7,7 @@
 #include "SinglyList.h"
 #include "SinglyList.cpp"
 #include "DoublyList.h"
+#include "MemoryPool.h"
 
 void test1()
 {
@@ -50,10 +51,18 @@ void test2()
 	delete doublyList;
 }
 
+void  test3()
+{
+	CMemoryPool pool;
+ 	CMemoryPool::Node* node = (CMemoryPool::Node*)pool.allocate(40);
+	int num1 = pool.getLefNum(40);
+	std::cout << "40 bytes left num:" << num1 << std::endl;
+}
+
 int main()
 {
-	
-	test2();
+	test3();
+	//test2();
 	//Sleep(10000);
 	std::this_thread::sleep_for(std::chrono::milliseconds(10000));
 
