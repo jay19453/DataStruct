@@ -53,9 +53,8 @@ void test2()
 
 void  test3()
 {
-	CMemoryPool pool;
- 	CMemoryPool::Node* node = (CMemoryPool::Node*)pool.allocate(40);
-	int num1 = pool.getLefNum(40);
+ 	CMemoryPool::Node* node = (CMemoryPool::Node*)CMemoryPool::allocate(40);
+	int num1 = CMemoryPool::getLefNum(40);
 	std::cout << "40 bytes left num:" << num1 << std::endl;
 }
 
