@@ -7,7 +7,7 @@
 #include "SinglyList.h"
 #include "SinglyList.cpp"
 #include "DoublyList.h"
-#include "MemoryPool.h"
+#include "Alloc.h"
 
 void test1()
 {
@@ -53,9 +53,13 @@ void test2()
 
 void  test3()
 {
- 	CMemoryPool::Node* node = (CMemoryPool::Node*)CMemoryPool::allocate(40);
-	int num1 = CMemoryPool::getLefNum(40);
+	void* node = alloc::allocate(40);
+	int num1 = alloc::getLefNum(40);
 	std::cout << "40 bytes left num:" << num1 << std::endl;
+	alloc::dellocate(node, 40);
+	num1 = alloc::getLefNum(40);
+	std::cout << "40 bytes left num:" << num1 << std::endl;
+	alloc::release();
 }
 
 int main()

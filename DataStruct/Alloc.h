@@ -53,9 +53,10 @@ private:
 	static const int NumberOfAddedNodesForEachTime = 20;
 private:
 	static Node* volatile free_list[NumberOfFreeLists];
-	static vector<int8_t*> malloc_vec;
+	static std::vector<int8_t*> malloc_vec;
 };
 alloc::Node* volatile alloc::free_list[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+std::vector<int8_t*> alloc::malloc_vec;
 int8_t* alloc::_start = 0;
 int8_t* alloc::_end = 0;
 int32_t alloc::_size = 0;
@@ -89,7 +90,7 @@ void  alloc::dellocate(void* &p,size_t size)
 	}
 	Node* node = (Node*)p;
 	Node* volatile * myFreeList = free_list + freeListIndex(size);
-	node->next_node = (*myFreeList)->next_node;
+	node->next_node = *myFreeList;
 	*myFreeList = node;
 	p = nullptr;
 }
@@ -98,13 +99,13 @@ void  alloc::release()
 {
 	if (malloc_vec.size() > 0)
 	{
-		for (malloc_vec::iterator<int8_t*>iter = malloc_vec::begin();iter != malloc_vec::end();++iter)
+		for (auto iter = malloc_vec.begin();iter != malloc_vec.end();++iter)
 		{
 			int8_t* _mem = *iter;
-			malloc_vec.erase(iter);
 			free(_mem);
 			_mem = nullptr;
 		}
+		malloc_vec.clear();
 	}
 }
 

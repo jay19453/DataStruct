@@ -155,9 +155,10 @@
     <ClCompile Include="SinglyList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Allocator.h" />
     <ClInclude Include="DoublyList.h" />
     <ClInclude Include="List.h" />
-    <ClInclude Include="MemoryPool.h" />
+    <ClInclude Include="Alloc.h" />
     <ClInclude Include="SinglyList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
