@@ -151,11 +151,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="alloter\NormalAlloter.cpp" />
+    <ClCompile Include="alloter\PoolAlloter.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="SinglyList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Allocator.h" />
+    <ClInclude Include="alloter\IAlloter.h" />
+    <ClInclude Include="alloter\NormalAlloter.h" />
+    <ClInclude Include="alloter\PoolAlloter.h" />
     <ClInclude Include="DoublyList.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Alloc.h" />

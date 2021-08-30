@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="alloter">
+      <UniqueIdentifier>{295213b1-af0b-4c79-83bb-1e505a6503f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SinglyList.cpp">
@@ -20,6 +23,12 @@
     </ClCompile>
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="alloter\NormalAlloter.cpp">
+      <Filter>alloter</Filter>
+    </ClCompile>
+    <ClCompile Include="alloter\PoolAlloter.cpp">
+      <Filter>alloter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +46,15 @@
     </ClInclude>
     <ClInclude Include="Alloc.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="alloter\IAlloter.h">
+      <Filter>alloter</Filter>
+    </ClInclude>
+    <ClInclude Include="alloter\NormalAlloter.h">
+      <Filter>alloter</Filter>
+    </ClInclude>
+    <ClInclude Include="alloter\PoolAlloter.h">
+      <Filter>alloter</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
