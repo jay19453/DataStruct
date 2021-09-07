@@ -13,8 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="alloter">
+    <Filter Include="base">
+      <UniqueIdentifier>{c67da19f-a4d1-41c3-98d2-3a7aa9cc87ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\alloter">
       <UniqueIdentifier>{295213b1-af0b-4c79-83bb-1e505a6503f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{3ebc1094-0ad6-4359-82e7-9bbbb9c28ee4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -24,11 +30,14 @@
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="alloter\NormalAlloter.cpp">
-      <Filter>alloter</Filter>
+    <ClCompile Include="base\alloter\NormalAlloter.cpp">
+      <Filter>base\alloter</Filter>
     </ClCompile>
-    <ClCompile Include="alloter\PoolAlloter.cpp">
-      <Filter>alloter</Filter>
+    <ClCompile Include="base\alloter\PoolAlloter.cpp">
+      <Filter>base\alloter</Filter>
+    </ClCompile>
+    <ClCompile Include="base\alloter\BlockMemoryPool.cpp">
+      <Filter>base\alloter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,14 +56,23 @@
     <ClInclude Include="Alloc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="alloter\IAlloter.h">
-      <Filter>alloter</Filter>
+    <ClInclude Include="base\alloter\IAlloter.h">
+      <Filter>base\alloter</Filter>
     </ClInclude>
-    <ClInclude Include="alloter\NormalAlloter.h">
-      <Filter>alloter</Filter>
+    <ClInclude Include="base\alloter\NormalAlloter.h">
+      <Filter>base\alloter</Filter>
     </ClInclude>
-    <ClInclude Include="alloter\PoolAlloter.h">
-      <Filter>alloter</Filter>
+    <ClInclude Include="base\alloter\PoolAlloter.h">
+      <Filter>base\alloter</Filter>
+    </ClInclude>
+    <ClInclude Include="base\alloter\BlockMemoryPool.h">
+      <Filter>base\alloter</Filter>
+    </ClInclude>
+    <ClInclude Include="config\NetConfig.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="base\public.h">
+      <Filter>base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

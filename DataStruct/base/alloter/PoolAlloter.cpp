@@ -13,11 +13,12 @@ namespace base {
 			void* data = _malloc_vec[i];
 			_alloter->Free(data);
 		}
+		_malloc_vec.clear();
 	}
 
 	void* PoolAlloter::Alloc(uint32_t size)
 	{
-		size = size <= 0 ? __align : size;
+		size = size <= 0 ? net::__align : size;
 		if (size > defaultMaxChunkSize)
 		{
 			return _alloter->AllocAlign(size);
