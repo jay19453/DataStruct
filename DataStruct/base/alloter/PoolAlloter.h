@@ -2,9 +2,9 @@
 #include "IAlloter.h"
 #include <vector>
 
-namespace base {
+namespace wnet {
 	static const uint8_t defaultMaxChunkSize = 128;
-	static const uint8_t defaultNumsOfFreeLists = defaultMaxChunkSize / net::__align;
+	static const uint8_t defaultNumsOfFreeLists = defaultMaxChunkSize / __align;
 
 	class PoolAlloter :public IAlloter
 	{
@@ -23,7 +23,7 @@ namespace base {
 	private:
 		uint32_t freeListIndex(size_t size)
 		{
-			return (size + net::__align - 1) / net::__align - 1;
+			return (size + __align - 1) / __align - 1;
 		}
 	private:
 		union Node

@@ -4,7 +4,7 @@
 #include <cstdint>
 #include "../../config/NetConfig.h"
 
-namespace base{
+namespace wnet{
 	class IAlloter {
 	public:
 		IAlloter() {};
@@ -18,7 +18,7 @@ namespace base{
 	protected:
 		uint32_t align(uint32_t size)
 		{
-			return (size + net::__align - 1) & ~(net::__align - 1);
+			return (size + __align - 1) & ~(__align - 1);
 		}
 	};
 }

@@ -1,7 +1,7 @@
 #pragma once
 #include "IAlloter.h"
 
-namespace base {
+namespace wnet {
 	class NormalAlloter :public IAlloter {
 	public:
 		NormalAlloter();

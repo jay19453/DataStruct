@@ -1,7 +1,7 @@
 #include "PoolAlloter.h"
 #include "NormalAlloter.h"
 
-namespace base {
+namespace wnet {
 	PoolAlloter::PoolAlloter() {
 		_alloter = MakeNormalAlloterPrt();
 	}
@@ -18,7 +18,7 @@ namespace base {
 
 	void* PoolAlloter::Alloc(uint32_t size)
 	{
-		size = size <= 0 ? net::__align : size;
+		size = size <= 0 ? __align : size;
 		if (size > defaultMaxChunkSize)
 		{
 			return _alloter->AllocAlign(size);

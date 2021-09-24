@@ -22,6 +22,15 @@
     <Filter Include="config">
       <UniqueIdentifier>{3ebc1094-0ad6-4359-82e7-9bbbb9c28ee4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="base\buffer">
+      <UniqueIdentifier>{5d5e3bad-c99c-44fd-a71a-0ceed7d79ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\struct">
+      <UniqueIdentifier>{71110ee3-3fbb-4f73-8a66-3551c4e56b1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\thread">
+      <UniqueIdentifier>{4c9c218f-2b23-4b90-94c8-36b6a98f39f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SinglyList.cpp">
@@ -73,6 +82,24 @@
     </ClInclude>
     <ClInclude Include="base\public.h">
       <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\struct\ListSlot.h">
+      <Filter>base\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="base\struct\List.h">
+      <Filter>base\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="base\thread\Thread.h">
+      <Filter>base\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="base\thread\ThreadWithQueue.h">
+      <Filter>base\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="base\struct\ThreadSafeBlockQueue.h">
+      <Filter>base\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="base\struct\ThreadSafeQueue.h">
+      <Filter>base\struct</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

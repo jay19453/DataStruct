@@ -2,11 +2,11 @@
 #include "../public.h"
 #include "../../config/NetConfig.h"
 
-namespace base {
+namespace wnet {
 
 	BlockMemoryPool::BlockMemoryPool(size_t size, size_t num):block_size(size),block_num(num)
 	{
-		block_size = _ALIGN(block_size, net::__align);
+		block_size = _ALIGN(block_size, __align);
 	}
 
 	BlockMemoryPool::~BlockMemoryPool()
@@ -38,7 +38,7 @@ namespace base {
 		{
 			return;
 		}
-		if (block_vec.size() > net::max_block_nums)
+		if (block_vec.size() > max_block_nums)
 		{
 			ReleaseHalf();
 		}

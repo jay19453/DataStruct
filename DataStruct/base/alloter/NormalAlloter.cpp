@@ -1,6 +1,6 @@
 #include "NormalAlloter.h"
 
-namespace base
+namespace wnet
 {
 	NormalAlloter::NormalAlloter()
 	{}

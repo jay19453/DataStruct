@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -164,6 +164,12 @@
     <ClInclude Include="base\alloter\NormalAlloter.h" />
     <ClInclude Include="base\alloter\PoolAlloter.h" />
     <ClInclude Include="base\public.h" />
+    <ClInclude Include="base\struct\List.h" />
+    <ClInclude Include="base\struct\ListSlot.h" />
+    <ClInclude Include="base\struct\ThreadSafeBlockQueue.h" />
+    <ClInclude Include="base\struct\ThreadSafeQueue.h" />
+    <ClInclude Include="base\thread\Thread.h" />
+    <ClInclude Include="base\thread\ThreadWithQueue.h" />
     <ClInclude Include="config\NetConfig.h" />
     <ClInclude Include="DoublyList.h" />
     <ClInclude Include="List.h" />

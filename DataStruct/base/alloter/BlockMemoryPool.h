@@ -2,7 +2,7 @@
 #include <vector>
 #include <memory>
 
-namespace base {
+namespace wnet {
 	class BlockMemoryPool {
 	public:
 		BlockMemoryPool(size_t size,size_t num);
