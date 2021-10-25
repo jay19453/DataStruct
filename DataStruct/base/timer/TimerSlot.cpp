@@ -29,6 +29,7 @@ namespace wnet {
 	}
 
 	//把left interval 和total interval 一样
+	//为了always周期执行
 	void TimerSlot::ResetTime()
 	{
 		_left_interval = _total_interval;

@@ -31,6 +31,12 @@
     <Filter Include="base\thread">
       <UniqueIdentifier>{4c9c218f-2b23-4b90-94c8-36b6a98f39f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="base\timer">
+      <UniqueIdentifier>{5efd1310-8425-4198-aa7a-5b5741d170a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\util">
+      <UniqueIdentifier>{4f6a7816-7ae1-4b4d-9a8b-2ad752c86221}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SinglyList.cpp">
@@ -47,6 +53,21 @@
     </ClCompile>
     <ClCompile Include="base\alloter\BlockMemoryPool.cpp">
       <Filter>base\alloter</Filter>
+    </ClCompile>
+    <ClCompile Include="base\timer\TimerSlot.cpp">
+      <Filter>base\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="base\util\Bitmap.cpp">
+      <Filter>base\util</Filter>
+    </ClCompile>
+    <ClCompile Include="base\util\time.cpp">
+      <Filter>base\util</Filter>
+    </ClCompile>
+    <ClCompile Include="base\util\Random.cpp">
+      <Filter>base\util</Filter>
+    </ClCompile>
+    <ClCompile Include="base\timer\TimerContainer.cpp">
+      <Filter>base\timer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +121,27 @@
     </ClInclude>
     <ClInclude Include="base\struct\ThreadSafeQueue.h">
       <Filter>base\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="base\timer\TimerSlot.h">
+      <Filter>base\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="base\util\Bitmap.h">
+      <Filter>base\util</Filter>
+    </ClInclude>
+    <ClInclude Include="base\util\Singleton.h">
+      <Filter>base\util</Filter>
+    </ClInclude>
+    <ClInclude Include="base\util\time.h">
+      <Filter>base\util</Filter>
+    </ClInclude>
+    <ClInclude Include="base\util\Random.h">
+      <Filter>base\util</Filter>
+    </ClInclude>
+    <ClInclude Include="base\timer\TimerInterface.h">
+      <Filter>base\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="base\timer\TimerContainer.h">
+      <Filter>base\timer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

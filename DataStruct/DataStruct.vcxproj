@@ -154,6 +154,11 @@
     <ClCompile Include="base\alloter\BlockMemoryPool.cpp" />
     <ClCompile Include="base\alloter\NormalAlloter.cpp" />
     <ClCompile Include="base\alloter\PoolAlloter.cpp" />
+    <ClCompile Include="base\timer\TimerContainer.cpp" />
+    <ClCompile Include="base\timer\TimerSlot.cpp" />
+    <ClCompile Include="base\util\Bitmap.cpp" />
+    <ClCompile Include="base\util\Random.cpp" />
+    <ClCompile Include="base\util\time.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="SinglyList.cpp" />
   </ItemGroup>
@@ -170,6 +175,13 @@
     <ClInclude Include="base\struct\ThreadSafeQueue.h" />
     <ClInclude Include="base\thread\Thread.h" />
     <ClInclude Include="base\thread\ThreadWithQueue.h" />
+    <ClInclude Include="base\timer\TimerContainer.h" />
+    <ClInclude Include="base\timer\TimerInterface.h" />
+    <ClInclude Include="base\timer\TimerSlot.h" />
+    <ClInclude Include="base\util\Bitmap.h" />
+    <ClInclude Include="base\util\Random.h" />
+    <ClInclude Include="base\util\Singleton.h" />
+    <ClInclude Include="base\util\time.h" />
     <ClInclude Include="config\NetConfig.h" />
     <ClInclude Include="DoublyList.h" />
     <ClInclude Include="List.h" />

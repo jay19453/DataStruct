@@ -73,10 +73,12 @@ namespace wnet {
 			int64_t cur_value = _bitmap[_index_r] >> cur_tep;
 			if (cur_value != 0)
 			{
-				ret += std::log2f(float(cur_value & (-cur_value))) + cur_tep;
+				ret += cur_tep;
+				ret += std::log2f(float(cur_value & (-cur_value)));
 				return ret;
 			}
 			else ret += step_size;
+
 		}
 		else ret += step_size;
 
@@ -85,12 +87,14 @@ namespace wnet {
 		{
 			return -1;
 		}
-		uint32_t cur_index = (uint32_t)std::log2f(float(_vec_temp_index & (-_vec_temp_index))) + 1;
+		//(uint32_t)std::log2f(float(temp_vec_bitmap & (-temp_vec_bitmap) + 1));
+		//为啥+1 因为index是从0开始 所以+1是为了在下一位置 & + 会先执行+运算  8&(-8 + 1) 00001000 & 11111001
+		uint32_t cur_index = (uint32_t)std::log2f(float(_vec_temp_index & (-_vec_temp_index) + 1));
 		uint32_t target_index = _index_r + cur_index;
 
 		int64_t target_value = _bitmap[target_index];
 		ret += (target_index - 1) * step_size;
-		ret += (uint32_t)std::log2f(float(target_value & (-target_value)));
+		ret += (uint32_t)std::log2f(float(target_value & (-target_value) + 1));
 		return ret;
 
 		/*while (_index_c < step_size)
@@ -101,7 +105,6 @@ namespace wnet {
 				return index + _index_c;
 			}
 		}*/
-		return -1;
 	}
 
 	bool Bitmap::Empty()
@@ -111,7 +114,7 @@ namespace wnet {
 	void Bitmap::Clear()
 	{
 		while (_vec_index != 0) {
-			int32_t next_vec_index = (int32_t)std::log2f(float(_vec_index & (-(int32_t)_vec_index)));
+			int32_t next_vec_index = (int32_t)std::log2f(float(_vec_index & (-(int32_t)_vec_index) + 1));
 			_bitmap[next_vec_index] = 0;
 			_vec_index = _vec_index & (_vec_index - 1);
 		}

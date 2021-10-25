@@ -17,10 +17,13 @@ namespace wnet {
 		bool RemoveTimer(std::weak_ptr<TimerSlot>t);
 
 		int32_t MinTime();
+		// return the timer wheel current time
 		int32_t CurrentTime();
 
 		uint32_t TimerRun(uint32_t step);
 
+		// get current timer wheel timeout time
+		int32_t LocalMinTime();
 		bool Empty();
 		void Clear();
 
