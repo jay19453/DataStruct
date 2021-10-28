@@ -14,8 +14,8 @@ namespace wnet {
 			_queue.push(value);
 		}
 		
-		void Pop(T& value){
-			_queue.pop(value);
+		T Pop(){
+			return std::move(_queue.pop());
 		}
 
 		int32_t Size()

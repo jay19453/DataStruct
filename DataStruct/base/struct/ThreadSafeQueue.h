@@ -6,10 +6,10 @@
 
 namespace wnet {
 	template <typename T>
-	class SafeQueue {
+	class ThreadSafeQueue {
 	public:
-		SafeQueue() {}
-		~SafeQueue() {}
+		ThreadSafeQueue() {}
+		~ThreadSafeQueue() {}
 	public:
 		bool empty()
 		{

@@ -3,7 +3,7 @@
 
 namespace wnet {
 
-	static const uint8_t format_time_buffer_size = sizeof("xxxx-xx-xx:xx xx:xx:xxx");
+	static const uint8_t format_time_buffer_size = sizeof("xxxx-xx-xx xx:xx:xx:xxx");
 
 	enum FormatTimeUnit {
 		FTU_YEAR		= 1,

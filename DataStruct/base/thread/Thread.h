@@ -48,7 +48,7 @@ namespace wnet {
 	protected:
 		Thread(const Thread&) = delete;
 		Thread& operator=(const Thread&) = delete;
-	private:
+	protected:
 		std::atomic_bool _stop;
 		std::unique_ptr<std::thread>  _thread;
 	};

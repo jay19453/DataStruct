@@ -15,16 +15,13 @@ namespace wnet {
 			cv.notify_all();
 		}
 
-		bool pop(T& value)
+		T pop()
 		{
 			lock_guard<std::mutex> lock(_mutex);
-			if (_queue.empty())
-			{
-				cv.wait(_mutex);
-			}
-			value = std::move(_queue.front(), [this]()->bool {return !_queue.empty(); });
+			cv.wait(_mutex, [this]()->bool {return !_queue.empty(); });
+			auto res = std::move(_queue.front());
 			_queue.pop();
-			return true;
+			return res;
 		}
 
 		void clear()
