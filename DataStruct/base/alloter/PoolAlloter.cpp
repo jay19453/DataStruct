@@ -63,10 +63,10 @@ namespace wnet {
 		*myFreeLists = node;
 	}
 
-	int8_t* PoolAlloter::ReFill(size_t size)
+	int8_t* PoolAlloter::ReFill(size_t size, uint32_t num /*= default_number_add_nodes*/)
 	{
-		size_t chunkNum = 20;
-		int8_t* result = AllocChunk(size, chunkNum);
+		size_t chunkNum = num;
+		int8_t* result = AllocChunk(size, num);
 		if (!result) return nullptr;
 		if (1 == chunkNum) return result;
 		//set node nextnode

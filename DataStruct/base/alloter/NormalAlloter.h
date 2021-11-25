@@ -1,5 +1,5 @@
 #pragma once
-#include "IAlloter.h"
+#include "AlloterInterface.h"
 
 namespace wnet {
 	class NormalAlloter :public IAlloter {

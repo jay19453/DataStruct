@@ -27,7 +27,7 @@ namespace wnet {
 		void clear()
 		{
 			lock_guard<std::mutex> lock(_mutex);
-			while (_queue.empty())
+			while (!_queue.empty())
 			{
 				_queue.pop();
 			}

@@ -10,7 +10,7 @@ namespace wnet {
 	public:
 		void clear()
 		{
-			if (!_tail)
+			/*if (!_tail)
 			{
 				return;
 			}
@@ -20,8 +20,10 @@ namespace wnet {
 				_header = _header->getNext();
 				res->setNext(nullptr);
 				reset(res);
-			}
+			}*/
 			_size = 0;
+			_header.reset();
+			_tail.reset();
 		}
 
 		void pushBack(std::shared_ptr<T> value) {
@@ -90,6 +92,10 @@ namespace wnet {
 			_size--;
 			return res;
 		}
+
+		uint32_t Size() { return _size; }
+		std::shared_ptr<T> GetHead() { return _header; }
+		std::shared_ptr<T> GetTail() { return _tail; }
 
 	private:
 		std::shared_ptr<T> _header;

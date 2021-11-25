@@ -154,6 +154,13 @@
     <ClCompile Include="base\alloter\BlockMemoryPool.cpp" />
     <ClCompile Include="base\alloter\NormalAlloter.cpp" />
     <ClCompile Include="base\alloter\PoolAlloter.cpp" />
+    <ClCompile Include="base\buffer\BufferBlock.cpp" />
+    <ClCompile Include="base\buffer\BufferQueue.cpp" />
+    <ClCompile Include="base\log\FileLogger.cpp" />
+    <ClCompile Include="base\log\Log.cpp" />
+    <ClCompile Include="base\log\LogManager.cpp" />
+    <ClCompile Include="base\log\LogStream.cpp" />
+    <ClCompile Include="base\log\StdoutLogger.cpp" />
     <ClCompile Include="base\timer\TimerContainer.cpp" />
     <ClCompile Include="base\timer\TimerSlot.cpp" />
     <ClCompile Include="base\util\Bitmap.cpp" />
@@ -165,9 +172,18 @@
   <ItemGroup>
     <ClInclude Include="Allocator.h" />
     <ClInclude Include="base\alloter\BlockMemoryPool.h" />
-    <ClInclude Include="base\alloter\IAlloter.h" />
+    <ClInclude Include="base\alloter\AlloterInterface.h" />
     <ClInclude Include="base\alloter\NormalAlloter.h" />
     <ClInclude Include="base\alloter\PoolAlloter.h" />
+    <ClInclude Include="base\buffer\BufferBlock.h" />
+    <ClInclude Include="base\buffer\BufferInterface.h" />
+    <ClInclude Include="base\buffer\BufferQueue.h" />
+    <ClInclude Include="base\log\FileLogger.h" />
+    <ClInclude Include="base\log\Log.h" />
+    <ClInclude Include="base\log\LogBase.h" />
+    <ClInclude Include="base\log\LogManager.h" />
+    <ClInclude Include="base\log\LogStream.h" />
+    <ClInclude Include="base\log\StdoutLogger.h" />
     <ClInclude Include="base\public.h" />
     <ClInclude Include="base\struct\List.h" />
     <ClInclude Include="base\struct\ListSlot.h" />
@@ -187,6 +203,9 @@
     <ClInclude Include="List.h" />
     <ClInclude Include="Alloc.h" />
     <ClInclude Include="SinglyList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

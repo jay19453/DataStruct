@@ -9,12 +9,12 @@ namespace wnet {
 		~BlockMemoryPool();
 	public:
 		void* AllocBlock();
-		void FreeBlock(int8_t* data);
+		void FreeBlock(void*& data);
 		void ReleaseHalf();
 
 		void Expansion(size_t num = 0);
 		uint32_t VecSize();
-
+		uint32_t GetBlockLength();
 	private:
 		size_t block_num;
 		size_t block_size;

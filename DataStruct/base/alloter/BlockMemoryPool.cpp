@@ -32,7 +32,7 @@ namespace wnet {
 		}
 	}
 
-	void BlockMemoryPool::FreeBlock(int8_t* data)
+	void BlockMemoryPool::FreeBlock(void*& data)
 	{
 		if (nullptr == data)
 		{
@@ -72,6 +72,11 @@ namespace wnet {
 	uint32_t BlockMemoryPool::VecSize()
 	{
 		return block_vec.size();
+	}
+
+	uint32_t BlockMemoryPool::GetBlockLength()
+	{
+		return block_size;
 	}
 
 	std::shared_ptr<BlockMemoryPool> MakeBlockMemPool(size_t size, size_t num)

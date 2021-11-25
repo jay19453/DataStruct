@@ -37,6 +37,9 @@
     <Filter Include="base\util">
       <UniqueIdentifier>{4f6a7816-7ae1-4b4d-9a8b-2ad752c86221}</UniqueIdentifier>
     </Filter>
+    <Filter Include="base\log">
+      <UniqueIdentifier>{c0b81023-45ac-4412-ab3a-6d768b995371}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SinglyList.cpp">
@@ -68,6 +71,24 @@
     </ClCompile>
     <ClCompile Include="base\timer\TimerContainer.cpp">
       <Filter>base\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="base\log\LogStream.cpp">
+      <Filter>base\log</Filter>
+    </ClCompile>
+    <ClCompile Include="base\log\LogManager.cpp">
+      <Filter>base\log</Filter>
+    </ClCompile>
+    <ClCompile Include="base\log\Log.cpp">
+      <Filter>base\log</Filter>
+    </ClCompile>
+    <ClCompile Include="base\log\FileLogger.cpp">
+      <Filter>base\log</Filter>
+    </ClCompile>
+    <ClCompile Include="base\log\StdoutLogger.cpp">
+      <Filter>base\log</Filter>
+    </ClCompile>
+    <ClCompile Include="base\buffer\BufferBlock.cpp">
+      <Filter>base\buffer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -143,5 +164,32 @@
     <ClInclude Include="base\timer\TimerContainer.h">
       <Filter>base\timer</Filter>
     </ClInclude>
+    <ClInclude Include="base\log\LogStream.h">
+      <Filter>base\log</Filter>
+    </ClInclude>
+    <ClInclude Include="base\log\Log.h">
+      <Filter>base\log</Filter>
+    </ClInclude>
+    <ClInclude Include="base\log\LogManager.h">
+      <Filter>base\log</Filter>
+    </ClInclude>
+    <ClInclude Include="base\log\LogBase.h">
+      <Filter>base\log</Filter>
+    </ClInclude>
+    <ClInclude Include="base\log\FileLogger.h">
+      <Filter>base\log</Filter>
+    </ClInclude>
+    <ClInclude Include="base\log\StdoutLogger.h">
+      <Filter>base\log</Filter>
+    </ClInclude>
+    <ClInclude Include="base\buffer\BufferInterface.h">
+      <Filter>base\buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="base\buffer\BufferBlock.h">
+      <Filter>base\buffer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
   </ItemGroup>
 </Project>
